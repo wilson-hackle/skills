@@ -10,10 +10,34 @@ Claude Code 커스텀 스킬 모음.
 
 ## 설치
 
-Claude Code 플러그인으로 설치한다.
+### 전체 설치 (플러그인)
+
+모든 스킬을 한 번에 설치한다.
 
 ```bash
-claude plugins add wilson-hackle/skills
+/plugin marketplace add wilson-hackle/skills
+/plugin install <plugin-name>@wilson-hackle-skills
+```
+
+### 개별 스킬 설치
+
+특정 스킬만 골라서 설치할 수 있다. SKILL.md 파일을 프로젝트 또는 글로벌 스킬 디렉토리에 복사한다.
+
+**프로젝트 단위** (해당 프로젝트에서만 사용):
+
+```bash
+# 프로젝트 루트에서
+mkdir -p .claude/skills/bug-investigate
+curl -o .claude/skills/bug-investigate/SKILL.md \
+  https://raw.githubusercontent.com/wilson-hackle/skills/main/skills/bug-investigate/SKILL.md
+```
+
+**글로벌** (모든 프로젝트에서 사용):
+
+```bash
+mkdir -p ~/.claude/skills/bug-investigate
+curl -o ~/.claude/skills/bug-investigate/SKILL.md \
+  https://raw.githubusercontent.com/wilson-hackle/skills/main/skills/bug-investigate/SKILL.md
 ```
 
 설치 후 Claude Code를 재시작하면 스킬이 자동으로 인식된다.
