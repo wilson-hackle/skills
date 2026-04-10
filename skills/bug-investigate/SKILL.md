@@ -1,6 +1,7 @@
 ---
 name: bug-investigate
-description: Chrome DevTools MCP를 이용한 프론트엔드 버그 재현 및 root cause 분석. 버그 제보를 받으면 로컬 개발 서버에서 CDP로 자동 재현하고, 콘솔 에러·네트워크 데이터를 수집하여 원인을 분석한 문서를 ./docs/issues/에 작성한다. "버그가 있어요", "에러가 나요", "왜 안 되지", "재현해봐", "이슈 조사해줘", "프론트 디버깅", "화면이 깨져요", "동작이 이상해요" 등 프론트엔드 버그 관련 요청에 반드시 이 스킬을 사용하라.
+description: Chrome DevTools MCP를 이용한 프론트엔드 버그 재현 및 root cause 분석. 로컬 개발 서버에서 CDP로 자동 재현하고, 콘솔 에러·네트워크 데이터를 수집하여 원인을 분석한 문서를 ./docs/issues/에 작성한다.
+disable-model-invocation: true
 ---
 
 # Bug Investigate
